@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Generate iOS project structure
+        run: flutter create --platforms=ios --project-name kefi_app .
+
       - name: Build iOS (sin firma)
         run: flutter build ios --release --no-codesign
 
